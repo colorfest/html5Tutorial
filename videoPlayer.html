@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Video Player - HTML5</title>
+	<link rel="stylesheet" href="css/video_player.css">
+</head>
+<body>
+	<section id="main">
+		<video id="videoPlayer" width="640" height="480">
+			<source src="video/test.webm" type="video/webm"></source>
+			<source src="video/test.ogv" type="video/ogv"></source>
+			<source src="video/test.mp4" type="video/mp4"></source>
+			This is a video for html5 browsers
+		</video>
+	</section>
+
+	<nav id="vidControls" class="clearfix">
+		<div id="playPauseBtn" class="left">Play</div>
+		<div id="scurbberContainer" class="left">
+			<div id="scrubberBar"></div>
+		</div>
+		<div id="timer" class="left">
+			00:00 / 00:00
+		</div>
+	</nav>
+
+	<!-- JAVASCRIPT -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/VideoPlayer.js"></script>
+	<script>
+		$(document).ready(function () {
+			VP.init();
+		});
+	</script>
+	<!-- END JAVASCRIPT -->
+</body>
+</html>
